@@ -23,8 +23,7 @@
     "test": "tsdx test",
     "lint": "tsdx lint",
     "size": "size-limit",
-    "analyze": "size-limit --why",
-    "prepublishOnly": "yarn build"
+    "analyze": "size-limit --why"
   },
   "dependencies": {
     "@baseswapfi/sdk-core": "^1.0.5",
