@@ -1,6 +1,6 @@
 {
   "name": "@baseswapfi/v2-sdk",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "license": "MIT",
   "description": "⚒️ An SDK for building applications on top of Baseswap V2",
   "author": "0xShoegazer",
@@ -24,10 +24,10 @@
     "lint": "tsdx lint",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "tsdx build"
   },
   "dependencies": {
-    "@baseswapfi/sdk-core": "^1.0.13",
+    "@baseswapfi/sdk-core": "^1.0.15",
     "@ethersproject/address": "^5.0.2",
     "@ethersproject/solidity": "^5.0.9",
     "jsbi": "^3.1.4",
