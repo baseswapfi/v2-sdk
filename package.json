@@ -1,6 +1,6 @@
 {
   "name": "@baseswapfi/v2-sdk",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "license": "MIT",
   "description": "⚒️ An SDK for building applications on top of Baseswap V2",
   "author": "0xShoegazer",
@@ -27,7 +27,7 @@
     "prepublishOnly": "tsdx build"
   },
   "dependencies": {
-    "@baseswapfi/sdk-core": "^1.0.20",
+    "@baseswapfi/sdk-core": "^1.0.21",
     "@ethersproject/address": "^5.0.2",
     "@ethersproject/solidity": "^5.0.9",
     "jsbi": "^3.1.4",
