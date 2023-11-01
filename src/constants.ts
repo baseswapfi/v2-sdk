@@ -1,9 +1,9 @@
-import { ChainId } from '@baseswapfi/sdk-core';
+import { ChainId, Percent } from '@baseswapfi/sdk-core';
 import JSBI from 'jsbi';
 
 export const V2_FACTORY_ADDRESS = '0xFDa619b6d20975be80A10332cD39b9a4b0FAa8BB';
 
-export const V2_FACTORY_ADDRESSES: { [chainId in ChainId]?: string } = {
+export const V2_FACTORY_ADDRESSES: { [chainId: number]: string } = {
   [ChainId.BASE]: V2_FACTORY_ADDRESS,
   [ChainId.SCROLL]: '0x74a52eb08d699CD8BE1d42dA4B241d526B8a8285',
 };
@@ -24,3 +24,7 @@ export const ONE = JSBI.BigInt(1);
 export const FIVE = JSBI.BigInt(5);
 export const _997 = JSBI.BigInt(997);
 export const _1000 = JSBI.BigInt(1000);
+export const BASIS_POINTS = JSBI.BigInt(10000);
+
+export const ZERO_PERCENT = new Percent(ZERO);
+export const ONE_HUNDRED_PERCENT = new Percent(ONE);
