@@ -4,7 +4,17 @@ import JSBI from 'jsbi';
 import { pack, keccak256 } from '@ethersproject/solidity';
 import { getCreate2Address } from '@ethersproject/address';
 
-import { V2_FACTORY_ADDRESS, INIT_CODE_HASH, MINIMUM_LIQUIDITY, FIVE, _997, _1000, ONE, ZERO } from '../constants';
+import {
+  V2_FACTORY_ADDRESS,
+  MINIMUM_LIQUIDITY,
+  FIVE,
+  _997,
+  _1000,
+  ONE,
+  ZERO,
+  CHAIN_LP_TOKEN_INFO,
+  INIT_CODE_HASHES,
+} from '../constants';
 import { InsufficientReservesError, InsufficientInputAmountError } from '../errors';
 
 export const computePairAddress = ({
@@ -20,7 +30,7 @@ export const computePairAddress = ({
   return getCreate2Address(
     factoryAddress,
     keccak256(['bytes'], [pack(['address', 'address'], [token0.address, token1.address])]),
-    INIT_CODE_HASH
+    INIT_CODE_HASHES[token0.chainId]
   );
 };
 export class Pair {
@@ -35,12 +45,16 @@ export class Pair {
     const tokenAmounts = currencyAmountA.currency.sortsBefore(tokenAmountB.currency) // does safety checks
       ? [currencyAmountA, tokenAmountB]
       : [tokenAmountB, currencyAmountA];
+
+    const chainId = tokenAmounts[0].currency.chainId;
+    const lpInfo = CHAIN_LP_TOKEN_INFO[chainId];
+
     this.liquidityToken = new Token(
       tokenAmounts[0].currency.chainId,
       Pair.getAddress(tokenAmounts[0].currency, tokenAmounts[1].currency),
       18,
-      'BWAP-V2',
-      'Baseswap V2'
+      lpInfo.symbol,
+      lpInfo.name
     );
     this.tokenAmounts = tokenAmounts as [CurrencyAmount<Token>, CurrencyAmount<Token>];
   }
