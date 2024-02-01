@@ -11,16 +11,16 @@ export const V2_FACTORY_ADDRESSES: { [chainId: number]: string } = {
   [ChainId.MODE_TESTNET]: '0xa26655bab784c9bd9daadaaff2a05a93484bf9c7',
 };
 
+// export const INIT_CODE_HASH = '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f';
 // PCS version
 export const INIT_CODE_HASH = '0xb618a2730fae167f5f8ac7bd659dd8436d571872655bcb6fd11f2158c8a64a3b';
-export const INIT_CODE_HASH_MODE = '0x337ec3ca78ed47c450332dd308033d9900832b31b7539f3befcbc556bff3a4a8';
 
 export const INIT_CODE_HASHES: { [chainId: number]: string } = {
   [ChainId.BASE]: INIT_CODE_HASH,
   [ChainId.BASE_GOERLI]: INIT_CODE_HASH,
   [ChainId.SCROLL]: INIT_CODE_HASH,
-  [ChainId.MODE]: INIT_CODE_HASH_MODE,
-  [ChainId.MODE_TESTNET]: INIT_CODE_HASH_MODE,
+  [ChainId.MODE]: '0x337ec3ca78ed47c450332dd308033d9900832b31b7539f3befcbc556bff3a4a8',
+  [ChainId.MODE_TESTNET]: '0x7c8fef18ebd49f340baabc0813d53d037c9eba0e0dfa80280b8b50c5a749ad9c',
 };
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000);
