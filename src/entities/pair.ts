@@ -14,6 +14,7 @@ import {
   ZERO,
   CHAIN_LP_TOKEN_INFO,
   INIT_CODE_HASHES,
+  V2_FACTORY_ADDRESSES,
 } from '../constants';
 import { InsufficientReservesError, InsufficientInputAmountError } from '../errors';
 
@@ -38,7 +39,7 @@ export class Pair {
   private readonly tokenAmounts: [CurrencyAmount<Token>, CurrencyAmount<Token>];
 
   public static getAddress(tokenA: Token, tokenB: Token): string {
-    return computePairAddress({ factoryAddress: V2_FACTORY_ADDRESS, tokenA, tokenB });
+    return computePairAddress({ factoryAddress: V2_FACTORY_ADDRESSES[tokenA.chainId], tokenA, tokenB });
   }
 
   public constructor(currencyAmountA: CurrencyAmount<Token>, tokenAmountB: CurrencyAmount<Token>) {
