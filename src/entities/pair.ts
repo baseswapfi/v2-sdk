@@ -5,7 +5,6 @@ import { pack, keccak256 } from '@ethersproject/solidity';
 import { getCreate2Address } from '@ethersproject/address';
 
 import {
-  V2_FACTORY_ADDRESS,
   MINIMUM_LIQUIDITY,
   FIVE,
   _997,
