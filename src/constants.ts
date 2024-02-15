@@ -1,4 +1,4 @@
-import { ChainId } from '@baseswapfi/sdk-core';
+import { ChainId, Percent } from '@baseswapfi/sdk-core';
 import JSBI from 'jsbi';
 
 export const V2_FACTORY_ADDRESSES: { [chainId: number]: string } = {
@@ -11,13 +11,16 @@ export const V2_FACTORY_ADDRESSES: { [chainId: number]: string } = {
 
 // Stock Uni hash
 // export const INIT_CODE_HASH = '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f';
-// PCS version
+
+/**
+ * @deprecated use INIT_CODE_HASHES instead
+ */
 export const INIT_CODE_HASH = '0xb618a2730fae167f5f8ac7bd659dd8436d571872655bcb6fd11f2158c8a64a3b';
 
 export const INIT_CODE_HASHES: { [chainId: number]: string } = {
-  [ChainId.BASE]: INIT_CODE_HASH,
-  [ChainId.BASE_GOERLI]: INIT_CODE_HASH,
-  [ChainId.SCROLL]: INIT_CODE_HASH,
+  [ChainId.BASE]: '0xb618a2730fae167f5f8ac7bd659dd8436d571872655bcb6fd11f2158c8a64a3b',
+  [ChainId.BASE_GOERLI]: '0xb618a2730fae167f5f8ac7bd659dd8436d571872655bcb6fd11f2158c8a64a3b',
+  [ChainId.SCROLL]: '0xb618a2730fae167f5f8ac7bd659dd8436d571872655bcb6fd11f2158c8a64a3b',
   [ChainId.MODE]: '0x337ec3ca78ed47c450332dd308033d9900832b31b7539f3befcbc556bff3a4a8',
   [ChainId.MODE_TESTNET]: '0x7c8fef18ebd49f340baabc0813d53d037c9eba0e0dfa80280b8b50c5a749ad9c',
 };
@@ -30,6 +33,10 @@ export const ONE = JSBI.BigInt(1);
 export const FIVE = JSBI.BigInt(5);
 export const _997 = JSBI.BigInt(997);
 export const _1000 = JSBI.BigInt(1000);
+export const BASIS_POINTS = JSBI.BigInt(10000);
+
+export const ZERO_PERCENT = new Percent(ZERO);
+export const ONE_HUNDRED_PERCENT = new Percent(ONE);
 
 export const CHAIN_LP_TOKEN_INFO: {
   [chainId: number]: { name: string; symbol: string };
