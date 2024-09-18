@@ -7,6 +7,7 @@ export const V2_FACTORY_ADDRESSES: { [chainId: number]: string } = {
   [ChainId.SCROLL]: '0x74a52eb08d699CD8BE1d42dA4B241d526B8a8285',
   [ChainId.MODE]: '0xfb926356baf861c93c3557d7327dbe8734a71891',
   [ChainId.MODE_TESTNET]: '0xa26655bab784c9bd9daadaaff2a05a93484bf9c7',
+  [ChainId.OPTIMISM]: '0xa26655BaB784C9BD9DAadAAFF2a05a93484bF9C7',
 };
 
 // Stock Uni hash
@@ -23,6 +24,7 @@ export const INIT_CODE_HASHES: { [chainId: number]: string } = {
   [ChainId.SCROLL]: '0xb618a2730fae167f5f8ac7bd659dd8436d571872655bcb6fd11f2158c8a64a3b',
   [ChainId.MODE]: '0x337ec3ca78ed47c450332dd308033d9900832b31b7539f3befcbc556bff3a4a8',
   [ChainId.MODE_TESTNET]: '0x7c8fef18ebd49f340baabc0813d53d037c9eba0e0dfa80280b8b50c5a749ad9c',
+  [ChainId.OPTIMISM]: '0x6a914cc4a10df8504bb55e7f9acf006d8409fbbb394fb40eae3af62ac11457b7',
 };
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000);
@@ -52,5 +54,9 @@ export const CHAIN_LP_TOKEN_INFO: {
   [ChainId.MODE_TESTNET]: {
     name: `SwapMode LPs`,
     symbol: 'SMD-LP',
+  },
+  [ChainId.OPTIMISM]: {
+    name: `OptimismSwap LPs`,
+    symbol: 'OPS-LP',
   },
 };
