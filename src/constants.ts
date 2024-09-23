@@ -56,7 +56,7 @@ export const CHAIN_LP_TOKEN_INFO: {
     symbol: 'SMD-LP',
   },
   [ChainId.OPTIMISM]: {
-    name: `OptimismSwap LPs`,
-    symbol: 'OPS-LP',
+    name: `Superswap LPs`,
+    symbol: 'SPS-LP',
   },
 };
