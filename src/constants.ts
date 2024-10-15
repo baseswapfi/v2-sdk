@@ -8,6 +8,7 @@ export const V2_FACTORY_ADDRESSES: { [chainId: number]: string } = {
   [ChainId.MODE]: '0xfb926356baf861c93c3557d7327dbe8734a71891',
   [ChainId.MODE_TESTNET]: '0xa26655bab784c9bd9daadaaff2a05a93484bf9c7',
   [ChainId.OPTIMISM]: '0x22505cb4d5d10b2c848a9d75c57ea72a66066d8c',
+  [ChainId.ARBITRUM]: '0x1C6E968f2E6c9DEC61DB874E28589fd5CE3E1f2c',
   [ChainId.SONEIUM_TESTNET]: '0x82995F682dc38b17B99079Cf63DF8d263C6D5eE0',
   [ChainId.SONIC_TESTNET]: '0x8DFAf055e21B16302DBf00815e5b4d9b6042a4Df',
 };
@@ -27,6 +28,7 @@ export const INIT_CODE_HASHES: { [chainId: number]: string } = {
   [ChainId.MODE]: '0x337ec3ca78ed47c450332dd308033d9900832b31b7539f3befcbc556bff3a4a8',
   [ChainId.MODE_TESTNET]: '0x7c8fef18ebd49f340baabc0813d53d037c9eba0e0dfa80280b8b50c5a749ad9c',
   [ChainId.OPTIMISM]: '0x6e07608342d32f0f0dd02578dbad53c670910abf33b1835b20deef24001435e8',
+  [ChainId.ARBITRUM]: '0x146a9a61ada215bdbc7346c169e030cf383f441b85d40c70970f98c8aa070cd4',
   [ChainId.SONEIUM_TESTNET]: '0x6e07608342d32f0f0dd02578dbad53c670910abf33b1835b20deef24001435e8',
   [ChainId.SONIC_TESTNET]: '0x6e07608342d32f0f0dd02578dbad53c670910abf33b1835b20deef24001435e8',
 };
@@ -70,5 +72,9 @@ export const CHAIN_LP_TOKEN_INFO: {
   [ChainId.SONIC_TESTNET]: {
     name: `Superswap LPs`,
     symbol: 'SPS-LP',
+  },
+  [ChainId.ARBITRUM]: {
+    name: `Arbidex LPs`,
+    symbol: 'ARX-LP',
   },
 };
